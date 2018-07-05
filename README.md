@@ -1,4 +1,4 @@
-Laravel 5 log viewer
+Laravel 5 log viewer (Clone from https://github.com/rap2hpoutre/laravel-log-viewer/issues/137) 
 ======================
 
 [![Packagist](https://img.shields.io/packagist/v/rap2hpoutre/laravel-log-viewer.svg)](https://packagist.org/packages/rap2hpoutre/laravel-log-viewer)
@@ -29,12 +29,12 @@ composer require rap2hpoutre/laravel-log-viewer
 
 Add Service Provider to `config/app.php` in `providers` section
 ```php
-Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+EndaLogView\LaravelLogViewer\LaravelLumenLogViewerServiceProvider::class,
 ```
 
 Add a route in your web routes file:
 ```php 
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+Route::get('logs', '\EndaLogView\LaravelLogViewer\LogViewerController@index');
 ```
 
 Go to `http://myapp/logs` or some other route
@@ -43,7 +43,7 @@ Go to `http://myapp/logs` or some other route
 
 ```
 php artisan vendor:publish \
-  --provider="Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider" \
+  --provider="EndaLogView\LaravelLogViewer\LaravelLogViewerServiceProvider" \
   --tag=views
 ``` 
 
@@ -52,17 +52,17 @@ Install (Lumen)
 
 Install via composer
 ```
-composer require rap2hpoutre/laravel-log-viewer
+composer require endanguyen/laravel-logviewer
 ```
 
 Add the following in `bootstrap/app.php`:
 ```php
-$app->register(\Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class);
+$app->register(\EndaLogView\LaravelLogViewer\LaravelLogViewerServiceProvider::class);
 ```
 
 Explicitly set the namespace in `app/Http/routes.php`:
 ```php
-$app->group(['namespace' => '\Rap2hpoutre\LaravelLogViewer'], function() use ($app) {
+$app->group(['namespace' => '\EndaLogView\LaravelLogViewer'], function() use ($app) {
     $app->get('logs', 'LogViewerController@index');
 });
 ```
