@@ -1,5 +1,5 @@
 {
-    "name": "laravel_and_lumen_log_views",
+    "name": "endanguyen/laravel-logviewer",
     "description": "A Laravel log reader",
     "license": "MIT",
     "keywords": ["log", "log-reader", "log-viewer", "logging", "laravel", "lumen"],
@@ -7,7 +7,7 @@
     "authors": [
         {
             "name": "enda",
-            "email": "raphaelht@gmail.com"
+            "email": "endanguyen@gmail.com"
         }
     ],
     "require": {
