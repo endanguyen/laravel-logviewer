@@ -1,0 +1,33 @@
+{
+    "name": "A Laravel log reader",
+    "description": "A Laravel log reader",
+    "license": "MIT",
+    "keywords": ["log", "log-reader", "log-viewer", "logging", "laravel", "lumen"],
+    "type": "laravel-package",
+    "authors": [
+        {
+            "name": "enda",
+            "email": "raphaelht@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*|5.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers"
+        ],
+        "psr-0": {
+            "EndaLogView\\LaravelLogViewer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EndaLogView\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
